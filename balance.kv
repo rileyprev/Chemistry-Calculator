@@ -1,0 +1,33 @@
+<Balance>:
+
+    equation: equation
+    result: result
+
+    MDTextField:
+        id: equation
+        hint_text: 'Equation'
+        size_hint: 0.35,0.1
+        pos_hint: {'center_x':0.5,'center_y':0.83}
+        font_name: 'arial-unicode-ms'
+    MDRectangleFlatButton:
+        text: 'Balance'
+        size_hint: 0.2,0.05
+        pos_hint: {'center_x': 0.635, 'center_y': 0.73}
+        on_press: root.balance()
+    MDRectangleFlatButton:
+        text: 'Info'
+        size_hint: 0.2,0.05
+        pos_hint: {"center_x":0.365,"center_y":0.73}
+        on_release: app.show_MDDialog_1('Currently, redox reactions are not supported. They will be added in future updates')
+    Label:
+        id: result
+        text: ''
+        bold: True
+        pos_hint: {'center_x': 0.5, 'center_y': 0.63}
+        font_name: 'arial-unicode-ms'
+        font_size: 65
+
+
+
+
+

@@ -1,0 +1,31 @@
+<Chemistry>:
+    Button:
+        text: "Balance Chemical Equations"
+        bold: True
+        italic: True
+        size_hint: .3,.05
+        pos_hint: {"x":0,"top":0.1}
+        on_press:
+            root.manager.transition.direction = 'left'
+            root.manager.transition.duration = 0
+            root.manager.current = 'balance_screen'
+    Button:
+        text: "Periodic Table"
+        bold: True
+        italic: True
+        size_hint: .3,.05
+        pos_hint: {"x":0,"top":0.05}
+        on_press:
+            root.manager.transition.direction = 'left'
+            root.manager.transition.duration = 0
+            root.manager.current = 'periodictable_screen'
+    Button:
+        text: "Stoichiometry"
+        bold: True
+        italic: True
+        size_hint: .3,.05
+        pos_hint: {"x":0,"top":0.15}
+        on_press:
+            root.manager.transition.direction = 'left'
+            root.manager.transition.duration = 0
+            root.manager.current = 'stoichiometry_screen'

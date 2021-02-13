@@ -1,0 +1,191 @@
+<ContentNavigationDrawer>:
+
+    id: menu
+    orientation: 'vertical'
+    BoxLayout
+        size_hint_y: None
+        height: self.minimum_height
+    ScrollView:
+        MDList:
+            id: mylist
+            OneLineListItem:
+                id: home screen
+                text: 'Home Screen'
+                bg_color: 0.1,0.1,0.1,1
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'home_screen'
+                    root.nav_drawer.set_state('closed')
+            OneLineListItem:
+                id: chemistry
+                text: 'Chemistry'
+                bg_color: 0.15,0.15,0.15,1
+            OneLineIconListItem:
+                id: periodic table
+                text: 'Periodic Table'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'periodictable_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "beaker"
+            OneLineIconListItem:
+                id: electron configurations
+                text: 'Electron Configurations'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'elecconfigs_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "beaker"
+            OneLineIconListItem:
+                id: molar mass
+                text: 'Molar Mass'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'molarmass_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "beaker"
+            OneLineIconListItem:
+                id: percent comp
+                text: 'Percent Composition'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'percentcomp_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "beaker"
+            OneLineIconListItem:
+                id: naming writing formulas
+                text: 'Naming/Writing Formulas'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'naming_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "beaker"
+            OneLineIconListItem:
+                id: balance chemical equations
+                text: 'Balance Chemical Equations'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'balance_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "beaker"
+            OneLineIconListItem:
+                id: stoichiometry
+                text: 'Stoichiometry'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'stoichiometry_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "beaker"
+            OneLineIconListItem:
+                id: ideal gas law
+                text: 'Ideal Gas Law'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'ideal_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "beaker"
+            OneLineIconListItem:
+                id: molarity
+                text: 'Molarity'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'molarity_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "beaker"
+            OneLineIconListItem:
+                id: molality
+                text: 'Molality'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'molality_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "beaker"
+            OneLineIconListItem:
+                id: solubility
+                text: 'Solubility Rules'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'solubility_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "beaker"
+            OneLineIconListItem:
+                id: oxidation numbers
+                text: 'Oxidation Numbers'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'oxnumbers_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "beaker"
+            OneLineListItem:
+                id: math
+                text: 'Math'
+                bg_color: 0.1,0.1,0.1,1
+            OneLineListItem:
+                id: calculus
+                text: 'Calculus'
+                bg_color: 0.15,0.15,0.15,1
+            OneLineIconListItem:
+                id: limits
+                text: 'Limits'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'limits_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "calculator"
+            OneLineListItem:
+                id: algebra
+                text: 'Algebra'
+                bg_color: 0.15,0.15,0.15,1
+            OneLineIconListItem:
+                id: solve equations
+                text: 'Solve Equations'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'solveequations_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "calculator"
+            OneLineIconListItem:
+                id: factoring
+                text: 'Factoring'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'factor_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "calculator"
+            OneLineListItem:
+                id: trigonometry
+                text: 'Trigonometry'
+                bg_color: 0.15,0.15,0.15,1
+            OneLineIconListItem:
+                id: unit circle
+                text: 'Unit Circle'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'unitcircle_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "calculator"
+            OneLineIconListItem:
+                id: triangle solver
+                text: 'Triangle Solver'
+                on_release:
+                    root.screen_manager.transition.duration = 0
+                    root.screen_manager.current = 'righttritrig_screen'
+                    root.nav_drawer.set_state('closed')
+                IconLeftWidget:
+                    icon: "calculator"

@@ -1,0 +1,27 @@
+<MolarMass>:
+
+    data: data
+    result: result
+
+    MDTextField:
+        id: data
+        hint_text: 'Element/Compound'
+        size_hint: 0.2,0.1
+        pos_hint: {"center_x":0.5,"center_y":0.8}
+        font_name: 'arial-unicode-ms'
+    MDRectangleFlatButton:
+        text: 'Calculate'
+        size_hint: 0.2,0.05
+        pos_hint: {"center_x":0.635,"center_y":0.7}
+        on_press: root.mass()
+    MDRectangleFlatButton:
+        text: 'Info'
+        size_hint: 0.2,0.05
+        pos_hint: {"center_x":0.365,"center_y":0.7}
+        on_release: app.show_MDDialog_8('Enter the element or compound and get the molar mass in grams per mole')
+    Label:
+        id: result
+        text: ""
+        bold: True
+        font_size: 75
+        font_name: 'arial-unicode-ms'

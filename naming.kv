@@ -1,0 +1,42 @@
+<Naming>:
+
+    type: type
+    data: data
+    nam: nam
+    result: result
+
+    MDTextField:
+        id: type
+        text: 'Molecular'
+        size_hint: 0.3,0.1
+        pos_hint: {"center_x":0.5,"center_y":0.6}
+        font_name: 'arial-unicode-ms'
+    MDTextField:
+        id: data
+        hint_text: 'Name/Formula'
+        size_hint: 0.3,0.1
+        pos_hint: {"center_x":0.5,"center_y":0.5}
+        font_name: 'arial-unicode-ms'
+    MDTextField:
+        id: nam
+        hint_text: 'Find Name or Formula'
+        size_hint: 0.3,0.1
+        pos_hint: {"center_x":0.5,"center_y":0.4}
+        font_name: 'arial-unicode-ms'
+    MDRectangleFlatButton:
+        text: 'Submit'
+        size_hint: 0.2,0.05
+        pos_hint: {"center_x":0.635,"center_y":0.3}
+        on_release: root.assign()
+    MDRectangleFlatButton:
+        text: 'Info'
+        size_hint: 0.2,0.05
+        pos_hint: {"center_x":0.365,"center_y":0.3}
+        on_release: app.show_MDDialog_9('Currently, only molecular compounds are supported. Ionic compounds with be supported in future updates.')
+    Label:
+        id: result
+        text: ''
+        bold: True
+        font_size: 50
+        pos_hint: {"center_x":0.5,"center_y":0.725}
+        font_name: 'arial-unicode-ms'

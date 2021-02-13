@@ -1,0 +1,28 @@
+<PercentComposition>:
+
+    data: data
+    result: result
+
+    MDTextField:
+        id: data
+        hint_text: 'Compound'
+        size_hint: 0.2,0.1
+        pos_hint: {"center_x":0.5,"center_y":0.8}
+        font_name: 'arial-unicode-ms'
+    MDRectangleFlatButton:
+        text: 'Calculate'
+        size_hint: 0.2,0.05
+        pos_hint: {"center_x":0.635,"center_y":0.725}
+        on_press: root.composition()
+    MDRectangleFlatButton:
+        text: 'Info'
+        size_hint: 0.2,0.05
+        pos_hint: {"center_x":0.365,"center_y":0.725}
+        on_release: app.show_MDDialog_11("Enter the compound and get each element's percent composition by mass")
+    Label:
+        id: result
+        text: ""
+        bold: True
+        font_size: 50
+        pos_hint: {'center_x':0.5}
+        font_name: 'arial-unicode-ms'

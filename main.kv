@@ -1,0 +1,129 @@
+#:include kv/contentnavigationdrawer.kv
+#:include kv/chemistry.kv
+#:include kv/naming.kv
+#:include kv/periodictable.kv
+#:include kv/balance.kv
+#:include kv/stoichiometry.kv
+#:include kv/limitexcessreagent.kv
+#:include kv/math.kv
+#:include kv/unitcircle.kv
+#:include kv/righttriangletrig.kv
+#:include kv/solveequations.kv
+#:include kv/limits.kv
+#:include kv/derivatives.kv
+#:include kv/molarmass.kv
+#:include kv/percentcomposition.kv
+#:include kv/molarity.kv
+#:include kv/molality.kv
+#:include kv/electronconfigurations.kv
+#:include kv/oxidationnumbers.kv
+#:include kv/shorthandnotation.kv
+#:include kv/factor.kv
+#:include kv/radicaloperations.kv
+#:include kv/idealgaslaw.kv
+#:include kv/solubility.kv
+#:include kv/empmolformula.kv
+
+Screen:
+    MDToolbar:
+        title: "My Scientific Calculator"
+        pos_hint: {"top":1}
+        elevation: 10
+        left_action_items: [["menu",lambda x: nav_drawer.set_state("open")]]
+        right_action_items: [["settings",lambda x: app.show_theme_picker()]]
+    MDToolbar:
+
+    NavigationLayout:
+        ScreenManager:
+            name: "screen_manager"
+            id: screen_manager
+            HomeScreen:
+                name: "home_screen"
+                id: home_screen
+                Image:
+                    source: 'imgs/scientist.png'
+                    pos_hint: {'center_x':0.25,'center_y':0.5}
+                Label:
+                    text: '        Welcome to\nMy Scientific Calculator!'
+                    bold: True
+                    italic: True
+                    font_size: 60
+                    pos_hint: {'center_y':0.55}
+                    font_name: 'arial-unicode-ms'
+            PeriodicTable:
+                name: "periodictable_screen"
+                id: periodictable_screen
+                Image:
+                    source: 'imgs/periodictable.png'
+            Naming:
+                name: 'naming_screen'
+                id: naming_screen
+            Balance:
+                name: 'balance_screen'
+                id: balance_screen
+            Stoichiometry:
+                name: 'stoichiometry_screen'
+                id: stoichiometry_screen
+            UnitCircle:
+                name: 'unitcircle_screen'
+                id: unitcircle_screen
+                Image:
+                    source: 'imgs/unitcircle.png'
+            SolveEquations:
+                name: 'solveequations_screen'
+                id: solveequations_screen
+            Limits:
+                name: 'limits_screen'
+                id: limits_screen
+            Derivatives:
+                name: 'derivatives_screen'
+                id: derivatives_screen
+            RightTriangleTrig:
+                name: 'righttritrig_screen'
+                id: righttritrig_screen
+                Image:
+                    source: 'imgs/triangle.png'
+                    size_hint: 0.6,0.6
+                    pos_hint: {'center_x':0.5,'center_y':0.5}
+            MolarMass:
+                name: 'molarmass_screen'
+                id: molarmass_screen
+            PercentComposition:
+                name: 'percentcomp_screen'
+                id: percentcomp_screen
+            Molarity:
+                name: 'molarity_screen'
+                id: molarity_screen
+            Molality:
+                name: 'molality_screen'
+                id: molality_screen
+            ElectronConfigurations:
+                name: 'elecconfigs_screen'
+                id: elecconfigs_screen
+            OxidationNumbers:
+                name: 'oxnumbers_screen'
+                id: oxnumbers_screen
+            ShorthandNotation:
+                name: 'shorthandnotation_screen'
+                id: shorthandnotation_screen
+            Factor:
+                name: 'factor_screen'
+                id: factor_screen
+            RadicalOperations:
+                name: 'radops_screen'
+                id: radops_screen
+            IdealGasLaw:
+                name: 'ideal_screen'
+                id: ideal_screen
+            Solubility:
+                name: 'solubility_screen'
+                id: solubility_screen
+            EmpMolFormula:
+                name: 'empmolform_screen'
+                id: empmolform_screen
+
+        MDNavigationDrawer:
+            id: nav_drawer
+            ContentNavigationDrawer:
+                screen_manager: screen_manager
+                nav_drawer: nav_drawer

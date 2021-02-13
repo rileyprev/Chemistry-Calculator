@@ -1,0 +1,22 @@
+<EmpMolFormula>:
+
+    MDTextField:
+        id: data
+        hint_text: 'solve_for=M'
+        size_hint: 0.45,0.1
+        pos_hint: {'center_x':0.5,'center_y':0.8}
+        font_name: 'arial-unicode-ms'
+    MDRectangleFlatButton:
+        text: 'Calculate'
+        size_hint: 0.2,0.05
+        pos_hint: {'center_x':0.635,'center_y':0.6}
+    MDRectangleFlatButton:
+        text: 'Info'
+        size_hint: 0.2,0.05
+        pos_hint: {'center_x':0.365,'center_y':0.7}
+        on_release: app.show_MDDialog('Possible Entries for Empirical: solve_for=E, num_elements, percent_1...etc. (Enter the element symbol at the end of each percent input. The number of percent entries is equal to num_elements)\n\nEx: solve_for=E, num_elements=2, percent_1=25.9N, percent_2=74.1O')
+    Label:
+        id: result
+        text: ''
+        font_size: 50
+        font_name: 'arial-unicode-ms'

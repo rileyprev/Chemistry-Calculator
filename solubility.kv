@@ -1,0 +1,26 @@
+<Solubility>:
+
+    data: data
+    result: result
+
+    MDTextField:
+        id: data
+        hint_text: 'Compound'
+        size_hint: 0.25,0.1
+        pos_hint: {'center_x':0.5,'center_y':0.8}
+        font_name: 'arial-unicode-ms'
+    MDRectangleFlatButton:
+        text: 'Submit'
+        size_hint: 0.2,0.05
+        pos_hint: {'center_x':0.635,'center_y':0.7}
+        on_release: root.soluble()
+    MDRectangleFlatButton:
+        text: 'Info'
+        size_hint: 0.2,0.05
+        pos_hint: {'center_x':0.365,'center_y':0.7}
+        on_release: app.show_MDDialog_13('Enter a chemical compound and find out whether it is soluble or insoluble\n\nEx: HNO3')
+    Label:
+        id: result
+        text: ''
+        font_size: 50
+        font_name: 'arial-unicode-ms'

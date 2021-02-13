@@ -1,0 +1,27 @@
+<Molality>:
+
+    data: data
+    result: result
+
+    MDTextField:
+        id: data
+        hint_text: 'moles_solute=1.0, kgrams_solvent=2.35'
+        size_hint: 0.6,0.1
+        pos_hint: {"center_x":0.5,"center_y":0.8}
+        font_name: 'arial-unicode-ms'
+    MDRectangleFlatButton:
+        text: 'Calculate'
+        size_hint: 0.2,0.05
+        pos_hint: {"center_x":0.635,"center_y":0.7}
+        on_release: root.calculate()
+    MDRectangleFlatButton:
+        text: 'Info'
+        size_hint: 0.2,0.05
+        pos_hint: {"center_x":0.365,"center_y":0.7}
+        on_release: app.show_MDDialog_6('Possible entries: moles_solute, grams_solute, solute, kgrams_solvent, grams_solvent, moles_solvent, solvent')
+    Label:
+        id: result
+        text: ''
+        bold: True
+        font_size: 75
+        font_name: 'arial-unicode-ms'

@@ -1,0 +1,33 @@
+<Math>:
+    Button:
+        text: "Trigonometry"
+        bold: True
+        italic: True
+        size_hint: .3,.05
+        pos_hint: {"x":0,"top":0.05}
+        on_press:
+            root.manager.transition.direction = 'right'
+            root.manager.transition.duration = 0
+            root.manager.current = 'trigonometry_screen'
+
+    Button:
+        text: "Solve Equations"
+        bold: True
+        italic: True
+        size_hint: .3,.05
+        pos_hint: {"x":0,"top":0.15}
+        on_press:
+            root.manager.transition.direction = 'right'
+            root.manager.transition.duration = 0
+            root.manager.current = 'solveequations_screen'
+
+    Button:
+        text: "Calculus"
+        bold: True
+        italic: True
+        size_hint: .3,.05
+        pos_hint: {"x":0,"top":0.1}
+        on_press:
+            root.manager.transition.direction = 'right'
+            root.manager.transition.duration = 0
+            root.manager.current = 'calculus_screen'

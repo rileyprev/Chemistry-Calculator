@@ -1,0 +1,18 @@
+<HomeScreen>:
+    ImageButton:
+        size_hint: 0.15,0.15
+        pos_hint: {"x":0.8,"top":0.9}
+        source: "imgs/beaker.png"
+        on_press:
+            root.manager.transition.direction = 'left'
+            root.manager.transition.duration = 0
+            root.manager.current = 'chemistry_screen'
+
+    ImageButton:
+        size_hint: 0.15,0.15
+        pos_hint: {"x":0.05,"top":0.91}
+        source: "imgs/calculator.png"
+        on_press:
+            root.manager.transition.direction = 'right'
+            root.manager.transition.duration = 0
+            root.manager.current = 'math_screen'

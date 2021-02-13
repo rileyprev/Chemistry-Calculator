@@ -1,0 +1,31 @@
+<SolveEquations>:
+    equation: equation
+    variable: variable
+    result: result
+
+    MDTextField:
+        id: equation
+        hint_text: 'Equation'
+        size_hint: 0.3,0.1
+        pos_hint: {"center_x":0.5,"center_y":0.8}
+    MDTextField:
+        id: variable
+        hint_text: 'Variable to solve for'
+        size_hint: 0.3,0.1
+        pos_hint: {"center_x":0.5,"center_y":0.7}
+    MDRectangleFlatButton:
+        text: "Solve"
+        size_hint: .2,.05
+        pos_hint: {"center_x":0.635,"center_y":0.6}
+        on_press: root.solveeq()
+    MDRectangleFlatButton:
+        text: 'Info'
+        size_hint: 0.2,0.05
+        pos_hint: {"center_x":0.365,"center_y":0.6}
+        on_release: app.show_MDDialog_16('Enter the equation and it will be solved. If no equal sign is entered, the expression is assumed to be equal to 0')
+    Label:
+        id: result
+        text: ""
+        bold: True
+        font_size: 50
+        font_name: 'arial-unicode-ms'
